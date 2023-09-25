@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# Trivia Game
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Game loop
 
-## Available Scripts
+1. Players get provided with a true/false question
+2. Players can then choose true/false
+   1. Correct answer: Points increase by 1
+   2. Wrong answer
+      1. If score > lowest highscore then show view to submit highscore (names must be longer than 3 characters)
+      2. If score < lowest highscore then show game over
+3. Repeat step 1
 
-In the project directory, you can run:
+### Features
 
-### `npm start`
+- Players should be able to choose easy, medium or hard difficulty.
+- Difficulty should start at medium
+- A top 5 highscore list that is stored in a client-side storage
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technical description
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Packages
 
-### `npm test`
+Following packages already installed and can be used in the task. Feel free to add more if you want to.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Axios
+- Lodash
+- React-hook-form
+- SCSS
+- Typescript
 
-### `npm run build`
+### Folder structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+You should familiarise yourself with the following files:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- api
+  - api.ts
+- components
+  - TriviaGame.scss
+  - TriviaGame.tsx
+- types
+  - gameTypes.ts
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## To get started
 
-### `npm run eject`
+1. First install all libraries using: (You may need to install yarn to run this command)
+   yarn
+2. Run the code use:
+   yarn start
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Description
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+You most likely only need to add code in TriviaGame.tsx but if you feel the need to add anything in the other files, feel free to do it. There is already a few empty functions to get you started but feel free there as well to add whatever you may need. You can add UseEffects and styles however you like.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Overall, this is a very open task where you can approach the solution in any manner you like but it’s encouraged to use the already installed libraries. You can also add any other features if you'd like.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Expectations
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+We'd like you to try get the main game loop running but don't feel pressured to have everything working perfectly as we will use this test as a base for discussions rather than a qualifier. Only spend as much time as you are comfortable with, but we'd prefer it if you send within a week.
